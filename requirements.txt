@@ -1,0 +1,4 @@
+pysoundfile   # recommended for windows
+torch
+msclap
+tqdm
