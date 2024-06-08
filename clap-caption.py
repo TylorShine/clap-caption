@@ -90,6 +90,6 @@ if __name__ == "__main__":
 
             
         if not cmds.print:
-            out_jsonl = f"{'_'.join(pathlib.Path(input_arg).as_posix().split("/")).replace(":", "")}.jsonl"
+            out_jsonl = f"{'_'.join(pathlib.Path(input_arg).as_posix().split('/')).replace(':', '')}.jsonl"
             with open(out_jsonl, 'w', encoding="utf-8") as f:
                 f.writelines(json.dumps(l) + '\n' for l in results)
