@@ -82,7 +82,7 @@ if __name__ == "__main__":
                 captions = clap_model.generate_caption(audio_files=[wavfile], beam_size=cmds.beam_size, temperature=cmds.temp)
             
             results.append({
-                wavfile: captions[0]
+                pathlib.Path(wavfile).as_posix(): captions[0]
             })
             
             if cmds.print:
